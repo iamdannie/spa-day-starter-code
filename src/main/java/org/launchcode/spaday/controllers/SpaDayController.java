@@ -80,8 +80,11 @@ public class SpaDayController {
             if (checkSkinType(skintype,facials.get(i))) {
                 appropriateFacials.add(facials.get(i));
             }
+            model.addAttribute("name", name );
+            model.addAttribute("manipedi",manipedi);
+            model.addAttribute("skintype", skintype);
         }
-
+            model.addAttribute("appropriateFacials", appropriateFacials);
         return "menu";
     }
 }
